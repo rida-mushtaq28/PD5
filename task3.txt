@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+float taxcalculator(char type ,float price);
+main ()
+{
+taxcalculator(type ,price);
+}
+
+ float taxcalculator(char type,float price)
+  {
+     char Type;
+     float Price,taxrate,taxamount,finalprice;
+     cout << "enter type :";
+     cin >> Type;
+     cout << "enter price:";
+     cin >> Price ;
+      if (Type='M')
+        {
+            float taxrate=(Price*6)/100;
+        }
+
+        if (Type='E')
+        {
+          float taxrate=(Price*8)/100;
+        }
+
+        if (Type='S')
+        {
+           float taxrate=(Price*10)/100;
+        }
+
+        if (Type='V')
+        {
+           float taxrate=(Price*12)/100;
+        }
+
+        if (Type='T')
+        {
+          float taxrate=(Price*15)/100;
+        }
+     taxamount=Price*(taxrate/100);
+     finalprice=Price+taxamount;
+     cout << "the final price on a vehical of type"<<Type<<"after adding the tax is"<<taxamount<<"final price will be" << finalprice;
+
+
+
+  }
